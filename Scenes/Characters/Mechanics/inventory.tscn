@@ -1,0 +1,760 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwbc04r1fe2s8"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/Mechanics/Inventory/inventory.gd" id="1_irf6b"]
+[ext_resource type="Texture2D" uid="uid://kv3yea707wrf" path="res://Assets/Sprites/Inventory/Inventory_style_03b.png" id="2_sebxf"]
+[ext_resource type="Texture2D" uid="uid://d03mspvv1rmcu" path="res://Assets/Sprites/Inventory/Inventory_Slot.png" id="3_vtrxv"]
+[ext_resource type="Texture2D" uid="uid://lp2fq3c5va26" path="res://Assets/Sprites/Inventory/Inventory_Bar.png" id="4_p0aba"]
+[ext_resource type="Script" path="res://Scripts/Characters/Mechanics/Inventory/slot.gd" id="5_b1i4k"]
+[ext_resource type="Script" path="res://Scripts/Characters/Mechanics/Inventory/bar.gd" id="6_48gx8"]
+[ext_resource type="Texture2D" uid="uid://yyjw4f1hs235" path="res://Assets/Sprites/Inventory/Inventory_select.png" id="7_8wubn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_845gh"]
+texture = ExtResource("3_vtrxv")
+
+[sub_resource type="FontFile" id="FontFile_yjype"]
+face_index = null
+embolden = null
+transform = null
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/2/0/ascent = 0.0
+cache/0/2/0/descent = 0.0
+cache/0/2/0/underline_position = 0.0
+cache/0/2/0/underline_thickness = 0.0
+cache/0/2/0/scale = 1.0
+cache/0/2/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/2/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/1/0/ascent = 0.0
+cache/0/1/0/descent = 0.0
+cache/0/1/0/underline_position = 0.0
+cache/0/1/0/underline_thickness = 0.0
+cache/0/1/0/scale = 1.0
+cache/0/1/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/1/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/3/0/ascent = 0.0
+cache/0/3/0/descent = 0.0
+cache/0/3/0/underline_position = 0.0
+cache/0/3/0/underline_thickness = 0.0
+cache/0/3/0/scale = 1.0
+cache/0/3/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/3/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/4/0/ascent = 0.0
+cache/0/4/0/descent = 0.0
+cache/0/4/0/underline_position = 0.0
+cache/0/4/0/underline_thickness = 0.0
+cache/0/4/0/scale = 1.0
+cache/0/4/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/4/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/5/0/ascent = 0.0
+cache/0/5/0/descent = 0.0
+cache/0/5/0/underline_position = 0.0
+cache/0/5/0/underline_thickness = 0.0
+cache/0/5/0/scale = 1.0
+cache/0/5/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/5/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/6/0/ascent = 0.0
+cache/0/6/0/descent = 0.0
+cache/0/6/0/underline_position = 0.0
+cache/0/6/0/underline_thickness = 0.0
+cache/0/6/0/scale = 1.0
+cache/0/6/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/6/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/7/0/ascent = 0.0
+cache/0/7/0/descent = 0.0
+cache/0/7/0/underline_position = 0.0
+cache/0/7/0/underline_thickness = 0.0
+cache/0/7/0/scale = 1.0
+cache/0/7/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/7/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/8/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/8/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/9/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/9/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/10/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/10/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/11/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/11/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/12/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/12/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/13/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/13/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/14/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/14/0/kerning_overrides/15/0 = Vector2(0, 0)
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/15/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/2/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/1/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/3/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/4/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/5/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/6/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/7/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/8/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/9/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/10/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/11/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/12/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/13/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/14/0 = Vector2(0, 0)
+cache/0/15/0/kerning_overrides/15/0 = Vector2(0, 0)
+
+[node name="Inventory" type="Node"]
+script = ExtResource("1_irf6b")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 874.0
+offset_top = 448.0
+offset_right = 1077.0
+offset_bottom = 584.0
+scale = Vector2(2, 2)
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="MainWindow" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 203.0
+offset_bottom = 136.0
+mouse_filter = 2
+texture = ExtResource("2_sebxf")
+metadata/_edit_lock_ = true
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/MainWindow"]
+layout_mode = 0
+offset_left = 82.0
+offset_top = 6.0
+offset_right = 197.0
+offset_bottom = 102.0
+mouse_filter = 2
+theme_override_constants/h_separation = -1
+theme_override_constants/v_separation = -1
+columns = 6
+metadata/_edit_lock_ = true
+
+[node name="MainSlot1" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot2" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot3" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot4" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot5" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot6" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot7" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot8" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot9" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot10" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot11" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot12" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot13" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot14" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot15" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot16" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot17" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot18" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot19" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot20" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot21" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot22" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot23" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot24" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot25" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot26" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot27" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot28" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot29" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="MainSlot30" type="Panel" parent="CanvasLayer/Control/MainWindow/GridContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="Equipment" type="Control" parent="CanvasLayer/Control/MainWindow"]
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 74.0
+offset_bottom = 65.0
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="HelmetSlot" type="Panel" parent="CanvasLayer/Control/MainWindow/Equipment" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+_type = 1
+metadata/_edit_lock_ = true
+
+[node name="ChestSlot" type="Panel" parent="CanvasLayer/Control/MainWindow/Equipment" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_top = 19.0
+offset_right = 20.0
+offset_bottom = 39.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+_type = 2
+metadata/_edit_lock_ = true
+
+[node name="BootsSlot" type="Panel" parent="CanvasLayer/Control/MainWindow/Equipment" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 48.0
+offset_right = 68.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+_type = 3
+metadata/_edit_lock_ = true
+
+[node name="WeaponSlot" type="Panel" parent="CanvasLayer/Control/MainWindow/Equipment" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 0
+offset_left = 48.0
+offset_top = 19.0
+offset_right = 68.0
+offset_bottom = 39.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+_type = 4
+metadata/_edit_lock_ = true
+
+[node name="Info" type="Label" parent="CanvasLayer/Control/MainWindow"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 46.0
+offset_right = 72.0
+offset_bottom = 100.0
+theme_override_fonts/font = SubResource("FontFile_yjype")
+theme_override_font_sizes/font_size = 10
+text = "Text text text text text Some text"
+autowrap_mode = 2
+clip_text = true
+metadata/_edit_lock_ = true
+
+[node name="Bar" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_top = 104.0
+offset_right = 203.0
+offset_bottom = 136.0
+mouse_filter = 2
+texture = ExtResource("4_p0aba")
+script = ExtResource("6_48gx8")
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Control/Bar"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 197.0
+offset_bottom = 26.0
+mouse_filter = 2
+theme_override_constants/separation = -1
+metadata/_edit_lock_ = true
+
+[node name="BarSlot1" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot2" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot3" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot4" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot5" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot6" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot7" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot8" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot9" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="BarSlot10" type="Panel" parent="CanvasLayer/Control/Bar/HBoxContainer" groups=["Slots"]]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_845gh")
+script = ExtResource("5_b1i4k")
+metadata/_edit_lock_ = true
+
+[node name="SelectRect" type="TextureRect" parent="CanvasLayer/Control/Bar"]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 26.0
+texture = ExtResource("7_8wubn")
