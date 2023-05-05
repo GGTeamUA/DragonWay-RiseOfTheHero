@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g8nk31s8hgyw"
-path="res://.godot/imported/Inventory_Helmet_Slot.png-7e16171eb31e6d4f1408ad945e88b69e.ctex"
+uid="uid://bpk0pu3ixkgqi"
+path="res://.godot/imported/objects.png-81173a123e3a3a942bc804c8f2989b2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Inventory/Inventory_Helmet_Slot.png"
-dest_files=["res://.godot/imported/Inventory_Helmet_Slot.png-7e16171eb31e6d4f1408ad945e88b69e.ctex"]
+source_file="res://Assets/Tiles/objects.png"
+dest_files=["res://.godot/imported/objects.png-81173a123e3a3a942bc804c8f2989b2a.ctex"]
 
 [params]
 

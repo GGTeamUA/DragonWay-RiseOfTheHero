@@ -5,7 +5,6 @@ extends CharacterBody2D
 var _dead = false
 var _velocity = Vector2.ZERO
 var _pickable_items = []
-var _pickable_item = null
 
 @onready var _animator = $AnimatedSprite2D
 @onready var _inventory = $Inventory
@@ -28,7 +27,7 @@ func _death():
 	_dead = true
 
 func _find_closed_item() -> Node2D:
-	if len(_pickable_items) == 0:
+	if _pickable_items.count == 0:
 		return null
 	var object = _pickable_items[0]
 	for item in _pickable_items:
@@ -45,21 +44,9 @@ func _on_mana_value_changed(mana):
 
 func _on_pick_up_area_2d_area_entered(area):
 	_pickable_items.append(area.get_parent()) 
-	if not _pickable_item:
-		_pickable_item = area.get_parent()
-		_pickable_item.set_tip_visible(true)
 
 func _on_pick_up_area_2d_area_exited(area):
 	_pickable_items.erase(area.get_parent())
-	if area.get_parent() == _pickable_item:
-		var item = _find_closed_item()
-		if item:
-			_pickable_item.set_tip_visible(false)
-			_pickable_item = item
-			_pickable_item.set_tip_visible(true)
-		else:
-			_pickable_item.set_tip_visible(false)
-			_pickable_item = null
 
 func _physics_process(delta):
 	if not _dead:
@@ -68,5 +55,6 @@ func _physics_process(delta):
 
 func _input(event):
 	if Input.is_action_just_pressed("interact"):
-		if _pickable_item:
-			_inventory.try_add_item(_pickable_item)
+		var item = _find_closed_item()
+		if item:
+			_inventory.try_add_item(item)
