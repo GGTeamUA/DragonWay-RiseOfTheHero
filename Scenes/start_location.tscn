@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://cosuvhxor5i22"]
+[gd_scene load_steps=30 format=3 uid="uid://cosuvhxor5i22"]
 
 [ext_resource type="Texture2D" uid="uid://cxyhq0r24iywy" path="res://Assets/Tiles/atlas_16x.png" id="1_phfrv"]
 [ext_resource type="Texture2D" uid="uid://c41bo5knfqpkg" path="res://Assets/Tiles/grass.png" id="1_ulq70"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://bb3r18g15qpd" path="res://Assets/Tiles/farm objects free.png" id="5_l3wv8"]
 [ext_resource type="Texture2D" uid="uid://ch1w5i8l05upx" path="res://Assets/Tiles/spring farm tilemap.png" id="6_jf0di"]
 [ext_resource type="Texture2D" uid="uid://p6a6uute71by" path="res://Assets/Tiles/plants free.png" id="7_a3ydx"]
+[ext_resource type="PackedScene" uid="uid://bs52yumsfnilq" path="res://Scenes/Characters/Players/knight.tscn" id="9_vfcwk"]
+[ext_resource type="PackedScene" uid="uid://diwkrbiytrgc6" path="res://Scenes/Items/Items/item.tscn" id="10_pcpid"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8sgwm"]
 texture = ExtResource("1_phfrv")
@@ -3485,3 +3487,21 @@ debug_color = Color(1, 0, 0, 1)
 z_index = 10
 shape = SubResource("SegmentShape2D_ysqxe")
 debug_color = Color(1, 0, 0, 1)
+
+[node name="Knight" parent="." instance=ExtResource("9_vfcwk")]
+position = Vector2(403, 321)
+
+[node name="Item" parent="." instance=ExtResource("10_pcpid")]
+position = Vector2(341, 331)
+
+[node name="Item2" parent="." instance=ExtResource("10_pcpid")]
+position = Vector2(314, 337)
+
+[node name="Item3" parent="." instance=ExtResource("10_pcpid")]
+position = Vector2(332, 348)
+
+[node name="Item4" parent="." instance=ExtResource("10_pcpid")]
+position = Vector2(289, 335)
+
+[node name="Item5" parent="." instance=ExtResource("10_pcpid")]
+position = Vector2(360, 338)

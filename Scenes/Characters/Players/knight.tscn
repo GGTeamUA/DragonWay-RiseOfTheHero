@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bs52yumsfnilq"]
+[gd_scene load_steps=28 format=3 uid="uid://bs52yumsfnilq"]
 
 [ext_resource type="Script" path="res://Scripts/Characters/Heroes/hero.gd" id="1_4ipit"]
 [ext_resource type="PackedScene" path="res://Scenes/Characters/Mechanics/health.tscn" id="2_jph66"]
@@ -138,13 +138,19 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnldl"]
-size = Vector2(22, 29)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7wky"]
+radius = 3.0
+height = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4h432"]
 radius = 26.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ww87h"]
+height = 27.0
+
 [node name="Knight" type="CharacterBody2D"]
+z_index = 5
+scale = Vector2(0.7, 0.7)
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_4ipit")
@@ -156,30 +162,46 @@ script = ExtResource("1_4ipit")
 [node name="Inventory" parent="." instance=ExtResource("4_86quw")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
 sprite_frames = SubResource("SpriteFrames_v4xwt")
 animation = &"idle"
 autoplay = "idle"
 frame = 1
 frame_progress = 0.275281
+offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1.5)
-shape = SubResource("RectangleShape2D_vnldl")
+position = Vector2(0, -2.85714)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_x7wky")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 limit_smoothed = true
 position_smoothing_enabled = true
 
-[node name="PickUpArea2D" type="Area2D" parent="."]
+[node name="PickUpArea" type="Area2D" parent="."]
+position = Vector2(0, -12.8571)
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
 shape = SubResource("CircleShape2D_4h432")
+debug_color = Color(0.921569, 0.909804, 0.211765, 0.0392157)
+
+[node name="HitArea" type="Area2D" parent="."]
+position = Vector2(0, -15.7143)
+collision_layer = 8
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitArea"]
+position = Vector2(0, 2.5)
+shape = SubResource("CapsuleShape2D_ww87h")
+debug_color = Color(0.894118, 0.207843, 0.207843, 0.329412)
 
 [connection signal="value_changed" from="Health" to="." method="_on_health_value_changed"]
 [connection signal="value_changed" from="Mana" to="." method="_on_mana_value_changed"]
-[connection signal="area_entered" from="PickUpArea2D" to="." method="_on_pick_up_area_2d_area_entered"]
-[connection signal="area_exited" from="PickUpArea2D" to="." method="_on_pick_up_area_2d_area_exited"]
+[connection signal="area_entered" from="PickUpArea" to="." method="_on_pick_up_area_2d_area_entered"]
+[connection signal="area_exited" from="PickUpArea" to="." method="_on_pick_up_area_2d_area_exited"]
