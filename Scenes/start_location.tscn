@@ -4102,4 +4102,4 @@ shape = SubResource("SegmentShape2D_ysqxe")
 debug_color = Color(1, 0, 0, 1)
 
 [node name="Knight" parent="." instance=ExtResource("10_v2aq5")]
-position = Vector2(350, 321)
+position = Vector2(352, 335)
