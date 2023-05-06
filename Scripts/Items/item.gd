@@ -10,10 +10,12 @@ enum item_type {
 
 @export var ID : int
 @export var type = item_type.default
+@export var item_name = ""
+@export_multiline var description = ""
 @export var _stack_limit = 64
-@export var _name = ""
-@export_multiline var _description = ""
 
+var count : set = set_count, get = get_count
+var free_count : get = get_free_count
 var _count = 1
 
 @onready var _pickable_object = $Area2D
@@ -27,6 +29,9 @@ func add_count(count):
 
 func remove_count(count):
 	_count -= count
+	if _count <= 0:
+		queue_free()
+		return
 	_update_count()
 
 func set_count(count):

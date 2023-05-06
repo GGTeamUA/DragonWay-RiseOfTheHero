@@ -1,18 +1,19 @@
-[gd_scene load_steps=31 format=3 uid="uid://cosuvhxor5i22"]
+[gd_scene load_steps=32 format=3 uid="uid://1c45kwnisdoa"]
 
-[ext_resource type="Texture2D" uid="uid://cxyhq0r24iywy" path="res://Assets/Tiles/atlas_16x.png" id="1_phfrv"]
-[ext_resource type="Texture2D" uid="uid://c41bo5knfqpkg" path="res://Assets/Tiles/grass.png" id="1_ulq70"]
-[ext_resource type="Texture2D" uid="uid://cb7mbe2qms15c" path="res://Assets/Tiles/farm bridges free.png" id="2_cql7g"]
-[ext_resource type="Texture2D" uid="uid://xut2hhplg3rx" path="res://Assets/Tiles/plains.png" id="2_txvuk"]
-[ext_resource type="Texture2D" uid="uid://fqdahf2nq8nm" path="res://Assets/Tiles/Tileset.png" id="4_boinj"]
-[ext_resource type="Texture2D" uid="uid://bb3r18g15qpd" path="res://Assets/Tiles/farm objects free.png" id="5_l3wv8"]
-[ext_resource type="Texture2D" uid="uid://ch1w5i8l05upx" path="res://Assets/Tiles/spring farm tilemap.png" id="6_jf0di"]
-[ext_resource type="Texture2D" uid="uid://p6a6uute71by" path="res://Assets/Tiles/plants free.png" id="7_a3ydx"]
-[ext_resource type="Texture2D" uid="uid://bpk0pu3ixkgqi" path="res://Assets/Tiles/objects.png" id="9_ljywx"]
-[ext_resource type="PackedScene" uid="uid://bs52yumsfnilq" path="res://Scenes/Characters/Players/knight.tscn" id="10_v2aq5"]
+[ext_resource type="Texture2D" uid="uid://cxyhq0r24iywy" path="res://assets/tiles/atlas_16x.png" id="1_7tn52"]
+[ext_resource type="Texture2D" uid="uid://cb7mbe2qms15c" path="res://assets/tiles/farm bridges free.png" id="2_fw46s"]
+[ext_resource type="Texture2D" uid="uid://c41bo5knfqpkg" path="res://assets/tiles/grass.png" id="3_ihal6"]
+[ext_resource type="Texture2D" uid="uid://xut2hhplg3rx" path="res://assets/tiles/plains.png" id="4_pidpx"]
+[ext_resource type="Texture2D" uid="uid://fqdahf2nq8nm" path="res://assets/tiles/Tileset.png" id="5_a2ay0"]
+[ext_resource type="Texture2D" uid="uid://bb3r18g15qpd" path="res://assets/tiles/farm objects free.png" id="6_1x366"]
+[ext_resource type="Texture2D" uid="uid://ch1w5i8l05upx" path="res://assets/tiles/spring farm tilemap.png" id="7_aimm1"]
+[ext_resource type="Texture2D" uid="uid://p6a6uute71by" path="res://assets/tiles/plants free.png" id="8_v867l"]
+[ext_resource type="Texture2D" uid="uid://bpk0pu3ixkgqi" path="res://assets/tiles/objects.png" id="9_ff1gg"]
+[ext_resource type="PackedScene" uid="uid://qq5f18qo05iv" path="res://scenes/characters/heroes/knight.tscn" id="10_18m4v"]
+[ext_resource type="PackedScene" uid="uid://dr256p36anioy" path="res://scenes/items/basic_item.tscn" id="11_7yng2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8sgwm"]
-texture = ExtResource("1_phfrv")
+texture = ExtResource("1_7tn52")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1615,7 +1616,7 @@ texture = ExtResource("1_phfrv")
 3:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14, -4.5, 14, -4.5, 14, 8, -14, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7h4if"]
-texture = ExtResource("2_cql7g")
+texture = ExtResource("2_fw46s")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1900,13 +1901,13 @@ texture = ExtResource("2_cql7g")
 9:10/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_imyli"]
-texture = ExtResource("1_ulq70")
+texture = ExtResource("3_ihal6")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ewmgt"]
-texture = ExtResource("2_txvuk")
+texture = ExtResource("4_pidpx")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2011,7 +2012,7 @@ texture = ExtResource("2_txvuk")
 3:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rjgru"]
-texture = ExtResource("4_boinj")
+texture = ExtResource("5_a2ay0")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2669,7 +2670,7 @@ texture = ExtResource("4_boinj")
 14:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3ypck"]
-texture = ExtResource("5_l3wv8")
+texture = ExtResource("6_1x366")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -2872,7 +2873,7 @@ texture = ExtResource("5_l3wv8")
 6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_22mek"]
-texture = ExtResource("6_jf0di")
+texture = ExtResource("7_aimm1")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3270,7 +3271,7 @@ texture = ExtResource("6_jf0di")
 2:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g413b"]
-texture = ExtResource("7_a3ydx")
+texture = ExtResource("8_v867l")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -3374,7 +3375,7 @@ texture = ExtResource("7_a3ydx")
 4:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_65jdj"]
-texture = ExtResource("9_ljywx")
+texture = ExtResource("9_ff1gg")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -4101,5 +4102,14 @@ z_index = 10
 shape = SubResource("SegmentShape2D_ysqxe")
 debug_color = Color(1, 0, 0, 1)
 
-[node name="Knight" parent="." instance=ExtResource("10_v2aq5")]
-position = Vector2(352, 335)
+[node name="Knight" parent="." instance=ExtResource("10_18m4v")]
+position = Vector2(401, 338)
+
+[node name="Item" parent="." instance=ExtResource("11_7yng2")]
+position = Vector2(352, 334)
+
+[node name="Item2" parent="." instance=ExtResource("11_7yng2")]
+position = Vector2(327, 339)
+
+[node name="Item3" parent="." instance=ExtResource("11_7yng2")]
+position = Vector2(315, 324)
