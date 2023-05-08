@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpabalel7qk6p"]
+
+[ext_resource type="Texture2D" uid="uid://dq0320c6fsaec" path="res://Assets/Tiles/sprites.png" id="1_ucgrl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wmk0a"]
+radius = 8.0
+
+[node name="Mushroom" type="Node2D"]
+z_index = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_ucgrl")
+offset = Vector2(8, -8)
+hframes = 8
+vframes = 5
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(8, -8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_wmk0a")
