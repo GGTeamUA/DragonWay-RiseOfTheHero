@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://wh8guj0dhpje"
-path="res://.godot/imported/Inventory_style_02a.png-bf66b354097ea99bfd2e430a85a9bf4b.ctex"
+path="res://.godot/imported/Inventory_style_02a.png-c897713abae251b71e3b31e9ae2a1c3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Inventory/Inventory_style_02a.png"
-dest_files=["res://.godot/imported/Inventory_style_02a.png-bf66b354097ea99bfd2e430a85a9bf4b.ctex"]
+source_file="res://Assets/Sprites/Inventory/Inventory_style_02a.png"
+dest_files=["res://.godot/imported/Inventory_style_02a.png-c897713abae251b71e3b31e9ae2a1c3f.ctex"]
 
 [params]
 

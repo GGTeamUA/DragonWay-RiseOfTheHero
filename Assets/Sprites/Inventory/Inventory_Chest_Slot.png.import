@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://tu34iil54ohn"
-path="res://.godot/imported/Inventory_Chest_Slot.png-417644a305651acd428523a2b65ab169.ctex"
+path="res://.godot/imported/Inventory_Chest_Slot.png-9c1438cd96f0cf4a8492b937f8dae5cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Inventory/Inventory_Chest_Slot.png"
-dest_files=["res://.godot/imported/Inventory_Chest_Slot.png-417644a305651acd428523a2b65ab169.ctex"]
+source_file="res://Assets/Sprites/Inventory/Inventory_Chest_Slot.png"
+dest_files=["res://.godot/imported/Inventory_Chest_Slot.png-9c1438cd96f0cf4a8492b937f8dae5cb.ctex"]
 
 [params]
 
