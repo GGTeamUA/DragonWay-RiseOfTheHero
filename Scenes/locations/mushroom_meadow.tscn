@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://chj1mn8j8l2ek"]
+[gd_scene load_steps=19 format=3]
 
-[ext_resource type="TileSet" uid="uid://bfawfa01774wb" path="res://TileSet/start_location.tres" id="1_rw40r"]
-[ext_resource type="PackedScene" uid="uid://cpabalel7qk6p" path="res://Scenes/mushroom.tscn" id="2_3m4b7"]
-[ext_resource type="PackedScene" uid="uid://bs52yumsfnilq" path="res://Scenes/Characters/Players/knight.tscn" id="3_el2d0"]
+[ext_resource type="TileSet" uid="uid://dq280l06fvcdn" path="res://tileset/start_location.tres" id="1_rw40r"]
+[ext_resource type="PackedScene" path="res://scenes/items/mushroom.tscn" id="2_3m4b7"]
+[ext_resource type="PackedScene" path="res://scenes/characters/heroes/knight.tscn" id="3_spfiw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_cmkmi"]
 a = Vector2(352, 112)
@@ -203,6 +203,5 @@ debug_color = Color(1, 0, 0, 1)
 position = Vector2(96, 376)
 shape = SubResource("RectangleShape2D_uq6hy")
 
-[node name="Knight" parent="." instance=ExtResource("3_el2d0")]
-y_sort_enabled = true
-position = Vector2(160, 384)
+[node name="Knight" parent="." instance=ExtResource("3_spfiw")]
+position = Vector2(236, 379)

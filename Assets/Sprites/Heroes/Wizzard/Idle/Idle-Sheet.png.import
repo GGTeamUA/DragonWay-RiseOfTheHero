@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2g0j21yjagfh"
-path="res://.godot/imported/Idle-Sheet.png-90ba6f843ce1d40a2b58eb556f9ceafa.ctex"
+path="res://.godot/imported/Idle-Sheet.png-a9ded9004cb1669a5a132f4c40106430.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/heroes/Wizzard/Idle/Idle-Sheet.png"
-dest_files=["res://.godot/imported/Idle-Sheet.png-90ba6f843ce1d40a2b58eb556f9ceafa.ctex"]
+source_file="res://assets/sprites/Heroes/Wizzard/Idle/Idle-Sheet.png"
+dest_files=["res://.godot/imported/Idle-Sheet.png-a9ded9004cb1669a5a132f4c40106430.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpabalel7qk6p"]
+[gd_scene load_steps=3 format=3 uid="uid://set3o3cw83wf"]
 
-[ext_resource type="Texture2D" uid="uid://dq0320c6fsaec" path="res://Assets/Tiles/sprites.png" id="1_ucgrl"]
+[ext_resource type="Texture2D" uid="uid://dq0320c6fsaec" path="res://assets/tilesmap/sprites.png" id="1_ucgrl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wmk0a"]
 radius = 8.0

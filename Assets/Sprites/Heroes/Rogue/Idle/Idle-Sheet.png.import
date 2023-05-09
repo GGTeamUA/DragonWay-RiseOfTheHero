@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://2b5gtdcwq0gp"
-path="res://.godot/imported/Idle-Sheet.png-16ecce9db446fae18654cad29181b1f3.ctex"
+path="res://.godot/imported/Idle-Sheet.png-5617a3fd7c7d97bced513e83c80680e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/heroes/Rogue/Idle/Idle-Sheet.png"
-dest_files=["res://.godot/imported/Idle-Sheet.png-16ecce9db446fae18654cad29181b1f3.ctex"]
+source_file="res://assets/sprites/Heroes/Rogue/Idle/Idle-Sheet.png"
+dest_files=["res://.godot/imported/Idle-Sheet.png-5617a3fd7c7d97bced513e83c80680e6.ctex"]
 
 [params]
 

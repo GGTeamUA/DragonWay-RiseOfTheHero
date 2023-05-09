@@ -1,12 +1,12 @@
-[gd_scene load_steps=28 format=3 uid="uid://qq5f18qo05iv"]
+[gd_scene load_steps=28 format=3]
 
 [ext_resource type="Script" path="res://scripts/characters/heroes/hero.gd" id="1_4ipit"]
 [ext_resource type="PackedScene" path="res://scenes/characters/mechanics/health.tscn" id="2_jph66"]
 [ext_resource type="PackedScene" path="res://scenes/characters/mechanics/mana.tscn" id="3_2csn4"]
-[ext_resource type="Texture2D" uid="uid://c8jnicb524g7o" path="res://assets/sprites/heroes/Knight/Death/Death-Sheet.png" id="3_el0g1"]
-[ext_resource type="PackedScene" uid="uid://irfb8iatk55s" path="res://scenes/characters/mechanics/inventory.tscn" id="4_86quw"]
-[ext_resource type="Texture2D" uid="uid://c1o2bfotjgatt" path="res://assets/sprites/heroes/Knight/Idle/Idle-Sheet.png" id="4_h1a5w"]
-[ext_resource type="Texture2D" uid="uid://cye6xr3nyd73h" path="res://assets/sprites/heroes/Knight/Run/Run-Sheet.png" id="5_e7ou7"]
+[ext_resource type="Texture2D" uid="uid://c8jnicb524g7o" path="res://assets/sprites/Heroes/Knight/Death/Death-Sheet.png" id="3_el0g1"]
+[ext_resource type="PackedScene" path="res://scenes/characters/mechanics/inventory.tscn" id="4_86quw"]
+[ext_resource type="Texture2D" uid="uid://c1o2bfotjgatt" path="res://assets/sprites/Heroes/Knight/Idle/Idle-Sheet.png" id="4_h1a5w"]
+[ext_resource type="Texture2D" uid="uid://cye6xr3nyd73h" path="res://assets/sprites/Heroes/Knight/Run/Run-Sheet.png" id="5_e7ou7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvawl"]
 atlas = ExtResource("3_el0g1")

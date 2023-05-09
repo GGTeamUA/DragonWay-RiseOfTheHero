@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwtll1jxlhylw"
-path="res://.godot/imported/fences.png-03c36a3b4195ddef72f8419bdf9ac941.ctex"
+uid="uid://bb3r18g15qpd"
+path="res://.godot/imported/farm objects free.png-7ae208a45c8581ebb024edaea35ba095.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/fences.png"
-dest_files=["res://.godot/imported/fences.png-03c36a3b4195ddef72f8419bdf9ac941.ctex"]
+source_file="res://assets/tilesmap/farm objects free.png"
+dest_files=["res://.godot/imported/farm objects free.png-7ae208a45c8581ebb024edaea35ba095.ctex"]
 
 [params]
 

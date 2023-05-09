@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb7mbe2qms15c"
-path="res://.godot/imported/farm bridges free.png-60fb11a2fb853c46df0fd4276dc76505.ctex"
+uid="uid://p6a6uute71by"
+path="res://.godot/imported/plants free.png-0c51d615348eeabd89f0cf034b8a04ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/farm bridges free.png"
-dest_files=["res://.godot/imported/farm bridges free.png-60fb11a2fb853c46df0fd4276dc76505.ctex"]
+source_file="res://assets/tilesmap/plants free.png"
+dest_files=["res://.godot/imported/plants free.png-0c51d615348eeabd89f0cf034b8a04ba.ctex"]
 
 [params]
 

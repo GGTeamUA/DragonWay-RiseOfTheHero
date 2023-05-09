@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch1w5i8l05upx"
-path="res://.godot/imported/spring farm tilemap.png-010bb3e39d29e4229952fcbef7043c7e.ctex"
+uid="uid://c41bo5knfqpkg"
+path="res://.godot/imported/grass.png-ffe8144d7413115c1a71a6a3e65e2b9e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tiles/spring farm tilemap.png"
-dest_files=["res://.godot/imported/spring farm tilemap.png-010bb3e39d29e4229952fcbef7043c7e.ctex"]
+source_file="res://assets/tilesmap/grass.png"
+dest_files=["res://.godot/imported/grass.png-ffe8144d7413115c1a71a6a3e65e2b9e.ctex"]
 
 [params]
 
