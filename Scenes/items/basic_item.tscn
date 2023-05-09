@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr256p36anioy"]
+
+[ext_resource type="Script" path="res://scripts/items/item.gd" id="1_mhlpf"]
+[ext_resource type="Texture2D" uid="uid://c4ck0l50voebh" path="res://assets/sprites/items/armours.png" id="2_7t6iu"]
+[ext_resource type="FontFile" uid="uid://byo0gavi3n5pv" path="res://assets/fonts/pixelcyr_normal.ttf" id="3_uhdu1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aucqc"]
+size = Vector2(16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0obnv"]
+atlas = ExtResource("2_7t6iu")
+region = Rect2(0, 0, 16, 16)
+
+[node name="Item" type="Node2D"]
+z_index = 4
+script = ExtResource("1_mhlpf")
+type = 1
+description = "Item"
+
+[node name="Area2D" type="Area2D" parent="."]
+z_index = -1
+scale = Vector2(0.7, 0.7)
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_7t6iu")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_aucqc")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 20.0
+offset_bottom = 20.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 18.0
+offset_bottom = 18.0
+mouse_filter = 2
+texture = SubResource("AtlasTexture_0obnv")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 21.0
+offset_bottom = 21.0
+theme_override_fonts/font = ExtResource("3_uhdu1")
+theme_override_font_sizes/font_size = 7
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="ItemPickTip" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -36.0
+offset_right = -2.0
+offset_bottom = -19.0
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ItemPickTip"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 19.0
+offset_right = 96.0
+offset_bottom = 77.0
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+
+[node name="ButtonLabel" type="Label" parent="ItemPickTip/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uhdu1")
+theme_override_font_sizes/font_size = 21
+text = "E"
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="CollectLabel" type="Label" parent="ItemPickTip/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uhdu1")
+theme_override_font_sizes/font_size = 21
+text = "Collect
+"
+metadata/_edit_lock_ = true

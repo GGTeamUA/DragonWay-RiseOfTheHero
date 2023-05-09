@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cb7mbe2qms15c"
-path="res://.godot/imported/farm bridges free.png-a610a1898bf5331ee51f5c2f35cde956.ctex"
+path="res://.godot/imported/farm bridges free.png-60fb11a2fb853c46df0fd4276dc76505.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tiles/farm bridges free.png"
-dest_files=["res://.godot/imported/farm bridges free.png-a610a1898bf5331ee51f5c2f35cde956.ctex"]
+source_file="res://assets/tiles/farm bridges free.png"
+dest_files=["res://.godot/imported/farm bridges free.png-60fb11a2fb853c46df0fd4276dc76505.ctex"]
 
 [params]
 
