@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://cp02e35nt71xi"]
 
-[ext_resource type="TileSet" path="res://tileset/start_location.tres" id="1_1041k"]
+[ext_resource type="TileSet" uid="uid://dq280l06fvcdn" path="res://tileset/start_location.tres" id="1_1041k"]
 [ext_resource type="PackedScene" path="res://Scenes/Characters/heroes/knight.tscn" id="10_7kn6x"]
 [ext_resource type="PackedScene" path="res://Scenes/items/basic_item.tscn" id="11_conj5"]
 
