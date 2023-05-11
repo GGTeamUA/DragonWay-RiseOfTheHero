@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://dccue4yvy3o7h"]
 
 [ext_resource type="Script" path="res://scripts/items/item.gd" id="1_mhlpf"]
 [ext_resource type="Texture2D" uid="uid://c4ck0l50voebh" path="res://assets/sprites/Items/armours.png" id="2_7t6iu"]
@@ -14,7 +14,6 @@ region = Rect2(0, 0, 16, 16)
 [node name="Item" type="Node2D"]
 z_index = 4
 script = ExtResource("1_mhlpf")
-type = 1
 description = "Item"
 
 [node name="Area2D" type="Area2D" parent="."]
