@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://dq280l06fvcdn" path="res://tileset/start_location.tres" id="1_1041k"]
 [ext_resource type="PackedScene" path="res://Scenes/Characters/heroes/knight.tscn" id="10_7kn6x"]
-[ext_resource type="PackedScene" path="res://Scenes/items/basic_item.tscn" id="11_conj5"]
+[ext_resource type="PackedScene" uid="uid://dccue4yvy3o7h" path="res://Scenes/items/basic_item.tscn" id="11_conj5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ffefl"]
 a = Vector2(-303, 209)
