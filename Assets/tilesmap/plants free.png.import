@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p6a6uute71by"
-path="res://.godot/imported/plants free.png-08fc5c4eb71c2db99bf94d9bfd375989.ctex"
+path="res://.godot/imported/plants free.png-0c51d615348eeabd89f0cf034b8a04ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tilesmap/plants free.png"
-dest_files=["res://.godot/imported/plants free.png-08fc5c4eb71c2db99bf94d9bfd375989.ctex"]
+source_file="res://assets/tilesmap/plants free.png"
+dest_files=["res://.godot/imported/plants free.png-0c51d615348eeabd89f0cf034b8a04ba.ctex"]
 
 [params]
 

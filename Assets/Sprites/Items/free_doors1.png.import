@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4e5u5xtr322g"
-path="res://.godot/imported/free_doors1.png-2ea77f8b91d2a36794bc5a164a8447f1.ctex"
+path="res://.godot/imported/free_doors1.png-a3509f70b95e11a4b831ac7696d55977.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Items/free_doors1.png"
-dest_files=["res://.godot/imported/free_doors1.png-2ea77f8b91d2a36794bc5a164a8447f1.ctex"]
+source_file="res://assets/sprites/Items/free_doors1.png"
+dest_files=["res://.godot/imported/free_doors1.png-a3509f70b95e11a4b831ac7696d55977.ctex"]
 
 [params]
 
