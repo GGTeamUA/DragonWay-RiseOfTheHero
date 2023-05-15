@@ -78,9 +78,7 @@ func _physics_process(delta):
 	_animation()
 
 func _input(event):
-	
 	if Input.is_action_just_pressed("strike") and _has_weapon and _can_strike:
-		print(Input.is_action_just_pressed("strike") and _has_weapon and _can_strike)
 		_striking = true
 		_can_strike = false
 		_strike_cooldown_timer.start()
