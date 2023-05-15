@@ -1,5 +1,7 @@
 extends Node
 
+signal weapon_equipped(qeuipped : bool)
+
 enum slot_type {
 	default,
 	helmet,
@@ -113,3 +115,11 @@ func _ready():
 func _input(_event):
 	if Input.is_action_just_pressed("inventory"):
 		_inventory_window.visible = not _inventory_window.visible
+
+
+func _on_weapon_slot_item_pulled(item):
+	weapon_equipped.emit(false)
+
+
+func _on_weapon_slot_item_puted(item):
+	weapon_equipped.emit(true)

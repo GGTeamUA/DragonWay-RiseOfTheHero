@@ -40,6 +40,8 @@ func pull_half_items() -> Node2D:
 	get_parent().add_child(new_item)
 	new_item.set_count(item_count)
 	item.remove_count(item_count)
+	if item_count == 1:
+		item_pulled.emit(new_item)
 	return new_item
 
 func get_item() -> Node2D:

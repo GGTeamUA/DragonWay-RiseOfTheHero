@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2g0j21yjagfh"
-path="res://.godot/imported/Idle-Sheet.png-b456e341b6e2355a4fdcd99056770fdc.ctex"
+uid="uid://b1ggm3t5lonc2"
+path="res://.godot/imported/player.png-00ce58c7289a645f968acdae95439215.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Heroes/Wizzard/Idle/Idle-Sheet.png"
-dest_files=["res://.godot/imported/Idle-Sheet.png-b456e341b6e2355a4fdcd99056770fdc.ctex"]
+source_file="res://assets/sprites/heroes/player.png"
+dest_files=["res://.godot/imported/player.png-00ce58c7289a645f968acdae95439215.ctex"]
 
 [params]
 

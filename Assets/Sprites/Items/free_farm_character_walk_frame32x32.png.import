@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b35stk7w4ckgk"
-path="res://.godot/imported/free_farm_character_walk_frame32x32.png-0d34cd17a1bd758c1f4df6b996c94b27.ctex"
+path="res://.godot/imported/free_farm_character_walk_frame32x32.png-a82ac204b3375148d29d63ee6d29ad66.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Items/free_farm_character_walk_frame32x32.png"
-dest_files=["res://.godot/imported/free_farm_character_walk_frame32x32.png-0d34cd17a1bd758c1f4df6b996c94b27.ctex"]
+source_file="res://assets/sprites/items/free_farm_character_walk_frame32x32.png"
+dest_files=["res://.godot/imported/free_farm_character_walk_frame32x32.png-a82ac204b3375148d29d63ee6d29ad66.ctex"]
 
 [params]
 
