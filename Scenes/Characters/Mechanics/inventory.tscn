@@ -107,6 +107,7 @@ mouse_filter = 2
 metadata/_edit_lock_ = true
 
 [node name="MainWindow" type="TextureRect" parent="CanvasLayer/Control"]
+visible = false
 layout_mode = 0
 offset_right = 203.0
 offset_bottom = 136.0

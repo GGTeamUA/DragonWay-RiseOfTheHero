@@ -113,14 +113,18 @@ func _on_strike_cooldown_timer_timeout():
 	_can_strike = true
 
 func _on_animated_sprite_2d_animation_finished():
-	if ($AnimatedSprite2D.animation == "strike_back" or 
-	$AnimatedSprite2D.animation == "strike_front" or 
-	$AnimatedSprite2D.animation == "strike_side"):
+	if _animator == null:
+		return
+	if (_animator.animation == "strike_back" or 
+	_animator.animation == "strike_front" or 
+	_animator.animation == "strike_side"):
 		_striking = false
 
 func _on_animated_sprite_2d_frame_changed():
-	if ($AnimatedSprite2D.animation == "strike_back" or 
-	$AnimatedSprite2D.animation == "strike_front" or 
-	$AnimatedSprite2D.animation == "strike_side"):
-		if $AnimatedSprite2D.frame == 1:
+	if _animator == null:
+		return
+	if (_animator.animation == "strike_back" or 
+	_animator.animation == "strike_front" or 
+	_animator.animation == "strike_side"):
+		if _animator.frame == 1:
 			_deal_damage()

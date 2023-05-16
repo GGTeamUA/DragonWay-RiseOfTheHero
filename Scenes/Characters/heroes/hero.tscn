@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://scripts/characters/mechanics/hit_area.gd" id="6_mnmxh"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/interactable_area.gd" id="6_opci8"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7wky"]
+radius = 3.0
+height = 14.2857
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dl1bl"]
 atlas = ExtResource("5_piauy")
 region = Rect2(0, 432, 48, 48)
@@ -418,10 +422,6 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x7wky"]
-radius = 3.0
-height = 14.2857
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_4h432"]
 radius = 26.0
 
@@ -435,6 +435,11 @@ collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_en1ce")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2.85714)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_x7wky")
+
 [node name="Health" parent="." instance=ExtResource("2_fx1kb")]
 
 [node name="Mana" parent="." instance=ExtResource("3_ia415")]
@@ -445,14 +450,9 @@ script = ExtResource("1_en1ce")
 y_sort_enabled = true
 position = Vector2(0, -2.85714)
 sprite_frames = SubResource("SpriteFrames_v4xwt")
-animation = &"strike_side"
+animation = &"idle_front"
 autoplay = "idle_front"
 offset = Vector2(0, -16)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -2.85714)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_x7wky")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
