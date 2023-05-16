@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cye6xr3nyd73h"
-path="res://.godot/imported/Run-Sheet.png-08f00e04d39b5b343a8065325ed7c20e.ctex"
+uid="uid://b1ggm3t5lonc2"
+path="res://.godot/imported/player.png-00ce58c7289a645f968acdae95439215.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Heroes/Knight/Run/Run-Sheet.png"
-dest_files=["res://.godot/imported/Run-Sheet.png-08f00e04d39b5b343a8065325ed7c20e.ctex"]
+source_file="res://assets/sprites/heroes/player.png"
+dest_files=["res://.godot/imported/player.png-00ce58c7289a645f968acdae95439215.ctex"]
 
 [params]
 

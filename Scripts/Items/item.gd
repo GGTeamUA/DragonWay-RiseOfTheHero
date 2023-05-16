@@ -8,6 +8,8 @@ enum item_type {
 	weapon
 }
 
+const INTERACT_TYPE = "item"
+
 @export var ID : int
 @export var type = item_type.default
 @export var item_name = ""
@@ -52,7 +54,7 @@ func set_inventory_mode(inventory_mode : bool):
 		_pickable_object.visible = true
 		_inventory_object.visible = false
 
-func set_tip_visible(value : bool):
+func on_hero_visible(value : bool):
 	_item_pick_tip.visible = value
 
 func use():

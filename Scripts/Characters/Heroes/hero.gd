@@ -1,14 +1,20 @@
 extends CharacterBody2D
 
 @export var _walk_speed : float = 500
+@export var _damage : float = 20
 
 var _dead = false
+var _has_weapon = false
+var _striking = false
+var _can_strike = true
 var _velocity = Vector2.ZERO
-var _pickable_items = []
-var _pickable_item = null
+var _last_velocity = Vector2.DOWN
 
+@onready var _health = $Health
+@onready var _mana = $Mana
 @onready var _animator = $AnimatedSprite2D
 @onready var _inventory = $Inventory
+@onready var _strike_cooldown_timer = $StrikeCooldownTimer
 
 func _movement(delta_time):
 	_velocity = Vector2.ZERO
@@ -18,23 +24,70 @@ func _movement(delta_time):
 	move_and_slide()
 
 func _animation():
-	_animator.flip_h = get_viewport().get_mouse_position().x < get_viewport_rect().size.x / 2
+	if _striking:
+		match _last_velocity:
+			Vector2.DOWN:
+				_animator.flip_h = false
+				_animator.play("strike_front")
+			Vector2.UP:
+				_animator.flip_h = false
+				_animator.play("strike_back")
+			Vector2.RIGHT:
+				_animator.flip_h = false
+				_animator.play("strike_side")
+			Vector2.LEFT:
+				_animator.flip_h = true
+				_animator.play("strike_side")
+		return
 	if _velocity == Vector2.ZERO:
-		_animator.play("idle")
+		match _last_velocity:
+			Vector2.DOWN:
+				_animator.flip_h = false
+				_animator.play("idle_front")
+			Vector2.UP:
+				_animator.flip_h = false
+				_animator.play("idle_back")
+			Vector2.RIGHT:
+				_animator.flip_h = false
+				_animator.play("idle_side")
+			Vector2.LEFT:
+				_animator.flip_h = true
+				_animator.play("idle_side")
 	else:
-		_animator.play("run")
+		if _velocity.x == 0:
+			_animator.flip_h = false
+			if _velocity.y > 0:
+				_animator.play("walk_front")
+				_last_velocity = Vector2.DOWN
+			else:
+				_animator.play("walk_back")
+				_last_velocity = Vector2.UP
+		else:
+			if _velocity.x > 0:
+				_animator.flip_h = false 
+				_animator.play("walk_side")
+				_last_velocity = Vector2.RIGHT
+			else:
+				_animator.flip_h = true
+				_animator.play("walk_side")
+				_last_velocity = Vector2.LEFT
+
+func _physics_process(delta):
+	if not _dead and not _striking:
+		_movement(delta)
+	_animation()
+
+func _input(event):
+	if Input.is_action_just_pressed("strike") and _has_weapon and _can_strike:
+		_striking = true
+		_can_strike = false
+		_strike_cooldown_timer.start()
+
+func _deal_damage():
+	pass
 
 func _death():
 	_dead = true
-
-func _find_closed_item() -> Node2D:
-	if len(_pickable_items) == 0:
-		return null
-	var object = _pickable_items[0]
-	for item in _pickable_items:
-		if position.distance_to(item.position) < position.distance_to(object.position):
-			object = item
-	return object
 
 func _on_health_value_changed(health):
 	if health <= 0:
@@ -43,30 +96,35 @@ func _on_health_value_changed(health):
 func _on_mana_value_changed(mana):
 	pass # Replace with function body.
 
-func _on_pick_up_area_2d_area_entered(area):
-	_pickable_items.append(area.get_parent()) 
-	if not _pickable_item:
-		_pickable_item = area.get_parent()
-		_pickable_item.set_tip_visible(true)
+func _on_inventory_weapon_equipped(qeuipped):
+	_has_weapon = qeuipped
 
-func _on_pick_up_area_2d_area_exited(area):
-	_pickable_items.erase(area.get_parent())
-	if area.get_parent() == _pickable_item:
-		var item = _find_closed_item()
-		if item:
-			_pickable_item.set_tip_visible(false)
-			_pickable_item = item
-			_pickable_item.set_tip_visible(true)
-		else:
-			_pickable_item.set_tip_visible(false)
-			_pickable_item = null
+func _on_hit_area_hited(damage):
+	_health.damage(damage)
 
-func _physics_process(delta):
-	if not _dead:
-		_movement(delta)
-	_animation()
+func _on_interactable_area_interacted(interacted_object):
+	match interacted_object.INTERACT_TYPE:
+		"item":
+			_inventory.try_add_item(interacted_object)
+		"npc":
+			print("こんにちは、NPC")
 
-func _input(event):
-	if Input.is_action_just_pressed("interact"):
-		if _pickable_item:
-			_inventory.try_add_item(_pickable_item)
+func _on_strike_cooldown_timer_timeout():
+	_can_strike = true
+
+func _on_animated_sprite_2d_animation_finished():
+	if _animator == null:
+		return
+	if (_animator.animation == "strike_back" or 
+	_animator.animation == "strike_front" or 
+	_animator.animation == "strike_side"):
+		_striking = false
+
+func _on_animated_sprite_2d_frame_changed():
+	if _animator == null:
+		return
+	if (_animator.animation == "strike_back" or 
+	_animator.animation == "strike_front" or 
+	_animator.animation == "strike_side"):
+		if _animator.frame == 1:
+			_deal_damage()

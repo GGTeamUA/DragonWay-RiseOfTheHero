@@ -1,19 +1,20 @@
-[gd_scene load_steps=21 format=3]
+[gd_scene load_steps=29 format=3 uid="uid://8qnvtre8i3q1"]
 
 [ext_resource type="Script" path="res://scripts/characters/mechanics/inventory/inventory.gd" id="1_irf6b"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/inventory/mouse_container.gd" id="2_iu64a"]
-[ext_resource type="Texture2D" uid="uid://kv3yea707wrf" path="res://assets/sprites/Inventory/Inventory_style_03b.png" id="2_sebxf"]
-[ext_resource type="Texture2D" uid="uid://d03mspvv1rmcu" path="res://assets/sprites/Inventory/Inventory_Slot.png" id="3_vtrxv"]
-[ext_resource type="Texture2D" uid="uid://lp2fq3c5va26" path="res://assets/sprites/Inventory/Inventory_Bar.png" id="4_p0aba"]
+[ext_resource type="Texture2D" uid="uid://kv3yea707wrf" path="res://assets/sprites/inventory/Inventory_style_03b.png" id="2_sebxf"]
+[ext_resource type="Texture2D" uid="uid://d03mspvv1rmcu" path="res://assets/sprites/inventory/Inventory_Slot.png" id="3_vtrxv"]
+[ext_resource type="Texture2D" uid="uid://lp2fq3c5va26" path="res://assets/sprites/inventory/Inventory_Bar.png" id="4_p0aba"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/inventory/slot.gd" id="5_b1i4k"]
-[ext_resource type="Texture2D" uid="uid://bnshnwiyrmlal" path="res://assets/sprites/Inventory/Inventory_Delete_Slot.png" id="5_p3kqx"]
+[ext_resource type="Texture2D" uid="uid://bnshnwiyrmlal" path="res://assets/sprites/inventory/Inventory_Delete_Slot.png" id="5_p3kqx"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/inventory/bar.gd" id="6_48gx8"]
-[ext_resource type="Texture2D" uid="uid://g8nk31s8hgyw" path="res://assets/sprites/Inventory/Inventory_Helmet_Slot.png" id="6_abcjw"]
-[ext_resource type="Texture2D" uid="uid://yyjw4f1hs235" path="res://assets/sprites/Inventory/Inventory_select.png" id="7_8wubn"]
-[ext_resource type="Texture2D" uid="uid://tu34iil54ohn" path="res://assets/sprites/Inventory/Inventory_Chest_Slot.png" id="7_nd7aa"]
-[ext_resource type="Texture2D" uid="uid://cp3l3jb5r6haj" path="res://assets/sprites/Inventory/Inventory_Boots_Slot.png" id="8_yhlyp"]
-[ext_resource type="Texture2D" uid="uid://i31dqin6n1io" path="res://assets/sprites/Inventory/Inventory_Weapon_Slot.png" id="9_war8b"]
-[ext_resource type="FontFile" uid="uid://byo0gavi3n5pv" path="res://assets/fonts/pixelcyr_normal.ttf" id="10_aeol1"]
+[ext_resource type="Texture2D" uid="uid://g8nk31s8hgyw" path="res://assets/sprites/inventory/Inventory_Helmet_Slot.png" id="6_abcjw"]
+[ext_resource type="Texture2D" uid="uid://yyjw4f1hs235" path="res://assets/sprites/inventory/Inventory_select.png" id="7_8wubn"]
+[ext_resource type="Texture2D" uid="uid://tu34iil54ohn" path="res://assets/sprites/inventory/Inventory_Chest_Slot.png" id="7_nd7aa"]
+[ext_resource type="Texture2D" uid="uid://cp3l3jb5r6haj" path="res://assets/sprites/inventory/Inventory_Boots_Slot.png" id="8_yhlyp"]
+[ext_resource type="Texture2D" uid="uid://i31dqin6n1io" path="res://assets/sprites/inventory/Inventory_Weapon_Slot.png" id="9_war8b"]
+[ext_resource type="FontFile" uid="uid://byo0gavi3n5pv" path="res://assets/fonts/pixelcyr_normal.ttf" id="10_e5hyy"]
+[ext_resource type="Texture2D" uid="uid://b1ggm3t5lonc2" path="res://assets/sprites/heroes/player.png" id="11_o7h3y"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_845gh"]
 resource_local_to_scene = true
@@ -38,6 +39,56 @@ texture = ExtResource("8_yhlyp")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jupjo"]
 resource_local_to_scene = true
 texture = ExtResource("9_war8b")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e3oe"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg60y"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fhpv"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vm6v"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfd50"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkop8"]
+atlas = ExtResource("11_o7h3y")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ktm0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e3oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yg60y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fhpv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vm6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfd50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkop8")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="Inventory" type="Node"]
 script = ExtResource("1_irf6b")
@@ -345,11 +396,18 @@ offset_top = 46.0
 offset_right = 165.0
 offset_bottom = 181.0
 scale = Vector2(0.4, 0.4)
-theme_override_fonts/font = ExtResource("10_aeol1")
+theme_override_fonts/font = ExtResource("10_e5hyy")
 theme_override_font_sizes/font_size = 21
-text = "Це не працює(поки)"
 autowrap_mode = 2
 clip_text = true
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Control/MainWindow"]
+position = Vector2(39.5, 12)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_ktm0l")
+animation = &"idle"
+autoplay = "idle"
 metadata/_edit_lock_ = true
 
 [node name="Bar" type="TextureRect" parent="CanvasLayer/Control"]
@@ -458,3 +516,6 @@ offset_bottom = 20.0
 scale = Vector2(2, 2)
 mouse_filter = 2
 script = ExtResource("2_iu64a")
+
+[connection signal="item_pulled" from="CanvasLayer/Control/MainWindow/Equipment/WeaponSlot" to="." method="_on_weapon_slot_item_pulled"]
+[connection signal="item_puted" from="CanvasLayer/Control/MainWindow/Equipment/WeaponSlot" to="." method="_on_weapon_slot_item_puted"]

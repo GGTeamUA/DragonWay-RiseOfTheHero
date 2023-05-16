@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=31 format=3 uid="uid://dq280l06fvcdn"]
+[gd_resource type="TileSet" load_steps=23 format=3 uid="uid://do205ri1cqbn8"]
 
 [ext_resource type="Texture2D" uid="uid://cxyhq0r24iywy" path="res://assets/tilesmap/atlas_16x.png" id="1_hiam8"]
 [ext_resource type="Texture2D" uid="uid://cb7mbe2qms15c" path="res://assets/tilesmap/farm bridges free.png" id="2_yd1ff"]
