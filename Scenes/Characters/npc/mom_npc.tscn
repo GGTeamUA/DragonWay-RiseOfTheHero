@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b45mqwp0pinm0"]
+
+[ext_resource type="PackedScene" uid="uid://bemiadlqvv36n" path="res://Scenes/Characters/npc/basic_npc.tscn" id="1_nx8v5"]
+[ext_resource type="Texture2D" uid="uid://3myr5k1rw3eq" path="res://Assets/atlas_textures/mom.tres" id="2_s602d"]
+
+[node name="MomNPC" instance=ExtResource("1_nx8v5")]
+atlas = ExtResource("2_s602d")
+data_path_file = "res://databases/dialogues/mom.json"
+
+[node name="Label" parent="Name" index="0"]
+text = "Mom"

@@ -1,0 +1,56 @@
+{
+	"dialogues":{
+		"Hello":[
+			{
+				"speaker":"npc",
+				"text":"Hello",
+				"choices":[]
+			}
+
+			{
+				"speaker":"npc",
+				"text":"How are you?",
+				"choices":[
+					{
+						"text":"Fine",
+						"event_type":"quests",
+						"event":"TAke quest"
+					},
+					{
+						"text":"BAd",
+						"event":"go out"
+					}
+				]
+			}
+		],
+
+		"go out":
+		{
+			"speaker":"npc",
+			"text":"FUck you",
+			"choices":[]
+		}
+	},
+
+	"quests":{
+		"quest_list":[
+			"TAke quest",
+		],
+		"TAke quest":{
+			"description":"TEXT",
+			"status":"active",
+			"tasks":[
+				{
+					"type":"kill",
+					"target":"Rat",
+					"count":6
+				},
+				{
+					"type":"talk",
+					"target":"Bob"
+				}
+			]
+		},
+	}
+
+}

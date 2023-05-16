@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r2yfvo8lsnof"
-path="res://.godot/imported/free_farm_plants2.png-d1c8241f9d15541e7555ce75bb30e83b.ctex"
+path="res://.godot/imported/free_farm_plants2.png-7782667b2d903c136df6be5f8dfb607e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Items/free_farm_plants2.png"
-dest_files=["res://.godot/imported/free_farm_plants2.png-d1c8241f9d15541e7555ce75bb30e83b.ctex"]
+source_file="res://Assets/Sprites/Items/free_farm_plants2.png"
+dest_files=["res://.godot/imported/free_farm_plants2.png-7782667b2d903c136df6be5f8dfb607e.ctex"]
 
 [params]
 

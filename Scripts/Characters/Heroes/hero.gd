@@ -15,6 +15,7 @@ var _last_velocity = Vector2.DOWN
 @onready var _animator = $AnimatedSprite2D
 @onready var _inventory = $Inventory
 @onready var _strike_cooldown_timer = $StrikeCooldownTimer
+@onready var _dialog_system = $DialogSystem
 
 func _movement(delta_time):
 	_velocity = Vector2.ZERO
@@ -107,7 +108,7 @@ func _on_interactable_area_interacted(interacted_object):
 		"item":
 			_inventory.try_add_item(interacted_object)
 		"npc":
-			print("こんにちは、NPC")
+			_dialog_system.start_talk(interacted_object)
 
 func _on_strike_cooldown_timer_timeout():
 	_can_strike = true
