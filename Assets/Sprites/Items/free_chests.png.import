@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://1yeqpmh3x6tm"
-path="res://.godot/imported/free_chests.png-43a31011b45adfa30c3326ab1a86cfac.ctex"
+path="res://.godot/imported/free_chests.png-15f671cb39835cf847e4aa401f1fff87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/items/free_chests.png"
-dest_files=["res://.godot/imported/free_chests.png-43a31011b45adfa30c3326ab1a86cfac.ctex"]
+source_file="res://assets/Sprites/Items/free_chests.png"
+dest_files=["res://.godot/imported/free_chests.png-15f671cb39835cf847e4aa401f1fff87.ctex"]
 
 [params]
 

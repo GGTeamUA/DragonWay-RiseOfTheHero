@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://btg7n4gl12h8v"]
+[gd_scene load_steps=13 format=3 uid="uid://btg7n4gl12h8v"]
 
-[ext_resource type="TileSet" uid="uid://dq280l06fvcdn" path="res://tileset/start_location.tres" id="1_p154l"]
-[ext_resource type="PackedScene" path="res://scenes/characters/heroes/knight.tscn" id="2_xfwxw"]
+[ext_resource type="TileSet" uid="uid://do205ri1cqbn8" path="res://tileset/start_location.tres" id="1_p154l"]
+[ext_resource type="PackedScene" uid="uid://bw024xqokny4" path="res://Scenes/Characters/heroes/hero.tscn" id="2_tilfk"]
+[ext_resource type="PackedScene" uid="uid://bemiadlqvv36n" path="res://Scenes/Characters/npc/npc.tscn" id="3_ehip0"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_rcf67"]
 a = Vector2(112, 32)
@@ -132,6 +133,8 @@ z_index = 10
 shape = SubResource("SegmentShape2D_7wxib")
 debug_color = Color(1, 0, 0, 1)
 
-[node name="Knight" parent="." instance=ExtResource("2_xfwxw")]
-y_sort_enabled = true
-position = Vector2(784, 16)
+[node name="Hero" parent="." instance=ExtResource("2_tilfk")]
+position = Vector2(784, 212)
+
+[node name="NPC" parent="." instance=ExtResource("3_ehip0")]
+position = Vector2(759, 321)

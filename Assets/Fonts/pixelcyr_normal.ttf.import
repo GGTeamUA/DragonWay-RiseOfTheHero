@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://byo0gavi3n5pv"
-path="res://.godot/imported/pixelcyr_normal.ttf-0dafe15f29c2a31acfa6072e7825693e.fontdata"
+path="res://.godot/imported/pixelcyr_normal.ttf-a1c3a38b691a80c0ee187caca321c104.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/pixelcyr_normal.ttf"
-dest_files=["res://.godot/imported/pixelcyr_normal.ttf-0dafe15f29c2a31acfa6072e7825693e.fontdata"]
+source_file="res://assets/Fonts/pixelcyr_normal.ttf"
+dest_files=["res://.godot/imported/pixelcyr_normal.ttf-a1c3a38b691a80c0ee187caca321c104.fontdata"]
 
 [params]
 

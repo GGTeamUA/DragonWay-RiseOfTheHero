@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmocpk173asjl"
-path="res://.godot/imported/Inventory_style_02d.png-40772f84982d403ae359f09ac0efadb1.ctex"
+uid="uid://1vj3pqct64t7"
+path="res://.godot/imported/01 - Full spritesheet (16x24).png-cafe7e61797ce2a019e6aab9191e91e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Inventory/Inventory_style_02d.png"
-dest_files=["res://.godot/imported/Inventory_style_02d.png-40772f84982d403ae359f09ac0efadb1.ctex"]
+source_file="res://assets/tilesmap/01 - Full spritesheet (16x24).png"
+dest_files=["res://.godot/imported/01 - Full spritesheet (16x24).png-cafe7e61797ce2a019e6aab9191e91e4.ctex"]
 
 [params]
 
