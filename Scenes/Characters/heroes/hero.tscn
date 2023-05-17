@@ -494,6 +494,7 @@ one_shot = true
 [connection signal="value_changed" from="Health" to="." method="_on_health_value_changed"]
 [connection signal="value_changed" from="Mana" to="." method="_on_mana_value_changed"]
 [connection signal="weapon_equipped" from="Inventory" to="." method="_on_inventory_weapon_equipped"]
+[connection signal="talking_ended" from="DialogSystem" to="." method="_on_dialog_system_talking_ended"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_entered" from="InteractableArea" to="InteractableArea" method="_on_area_entered"]

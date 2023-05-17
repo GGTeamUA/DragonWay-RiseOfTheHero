@@ -7,6 +7,7 @@ var _dead = false
 var _has_weapon = false
 var _striking = false
 var _can_strike = true
+var _talking = false
 var _velocity = Vector2.ZERO
 var _last_velocity = Vector2.DOWN
 
@@ -74,7 +75,7 @@ func _animation():
 				_last_velocity = Vector2.LEFT
 
 func _physics_process(delta):
-	if not _dead and not _striking:
+	if not _dead and not _striking and not _talking:
 		_movement(delta)
 	_animation()
 
@@ -108,6 +109,8 @@ func _on_interactable_area_interacted(interacted_object):
 		"item":
 			_inventory.try_add_item(interacted_object)
 		"npc":
+			_velocity = Vector2.ZERO
+			_talking = true
 			_dialog_system.start_talk(interacted_object)
 
 func _on_strike_cooldown_timer_timeout():
@@ -129,3 +132,6 @@ func _on_animated_sprite_2d_frame_changed():
 	_animator.animation == "strike_side"):
 		if _animator.frame == 1:
 			_deal_damage()
+
+func _on_dialog_system_talking_ended():
+	_talking = false

@@ -26,13 +26,13 @@
 				"text": "You will have a task, go to that forest and pick at least a dozen of those mushrooms.",
 				"choices": [
 					{
+						"text": "Wait, I still have some things to do",
+						"event_type": "leave",
+					},
+					{
 						"text": "Alright, then I'm off.",
 						"event_type": "quests",
 						"event": "Mushrooms"
-					},
-					{
-						"text": "Wait, I still have some things to do",
-						"event_type": "leave"
 					}
 				]
 			}
