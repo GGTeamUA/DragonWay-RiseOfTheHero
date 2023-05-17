@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ch1w5i8l05upx"
-path="res://.godot/imported/spring farm tilemap.png-14f6c3b6d7aafc53dedde4554a92b1dd.ctex"
+path="res://.godot/imported/spring farm tilemap.png-7f2970a3f471d592d3b20a93c41aab01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesmap/spring farm tilemap.png"
-dest_files=["res://.godot/imported/spring farm tilemap.png-14f6c3b6d7aafc53dedde4554a92b1dd.ctex"]
+source_file="res://Assets/tilesmap/spring farm tilemap.png"
+dest_files=["res://.godot/imported/spring farm tilemap.png-7f2970a3f471d592d3b20a93c41aab01.ctex"]
 
 [params]
 

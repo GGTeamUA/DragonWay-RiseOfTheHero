@@ -1,10 +1,11 @@
-[gd_scene load_steps=63 format=3 uid="uid://bw024xqokny4"]
+[gd_scene load_steps=64 format=3 uid="uid://bw024xqokny4"]
 
 [ext_resource type="Script" path="res://scripts/characters/heroes/hero.gd" id="1_en1ce"]
 [ext_resource type="PackedScene" path="res://scenes/characters/mechanics/health.tscn" id="2_fx1kb"]
 [ext_resource type="PackedScene" path="res://scenes/characters/mechanics/mana.tscn" id="3_ia415"]
-[ext_resource type="PackedScene" path="res://scenes/Characters/Mechanics/inventory.tscn" id="4_wf62c"]
-[ext_resource type="Texture2D" uid="uid://b1ggm3t5lonc2" path="res://assets/sprites/heroes/player.png" id="5_piauy"]
+[ext_resource type="PackedScene" uid="uid://8qnvtre8i3q1" path="res://Scenes/Characters/Mechanics/inventory.tscn" id="4_wf62c"]
+[ext_resource type="PackedScene" uid="uid://c5nin6y0yidca" path="res://Scenes/Characters/Mechanics/dialog_system.tscn" id="5_jxvvq"]
+[ext_resource type="Texture2D" uid="uid://b1ggm3t5lonc2" path="res://Assets/Sprites/heroes/player.png" id="5_piauy"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/hit_area.gd" id="6_mnmxh"]
 [ext_resource type="Script" path="res://scripts/characters/mechanics/interactable_area.gd" id="6_opci8"]
 
@@ -446,6 +447,8 @@ shape = SubResource("CapsuleShape2D_x7wky")
 
 [node name="Inventory" parent="." instance=ExtResource("4_wf62c")]
 
+[node name="DialogSystem" parent="." instance=ExtResource("5_jxvvq")]
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, -2.85714)
@@ -491,6 +494,7 @@ one_shot = true
 [connection signal="value_changed" from="Health" to="." method="_on_health_value_changed"]
 [connection signal="value_changed" from="Mana" to="." method="_on_mana_value_changed"]
 [connection signal="weapon_equipped" from="Inventory" to="." method="_on_inventory_weapon_equipped"]
+[connection signal="talking_ended" from="DialogSystem" to="." method="_on_dialog_system_talking_ended"]
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_entered" from="InteractableArea" to="InteractableArea" method="_on_area_entered"]

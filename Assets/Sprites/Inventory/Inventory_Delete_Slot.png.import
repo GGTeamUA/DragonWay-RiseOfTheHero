@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnshnwiyrmlal"
-path="res://.godot/imported/Inventory_Delete_Slot.png-8aa75e9e06b79c92ffd382ebab1b0159.ctex"
+path="res://.godot/imported/Inventory_Delete_Slot.png-156aedb98861b8cac458ec8cc68d0145.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/inventory/Inventory_Delete_Slot.png"
-dest_files=["res://.godot/imported/Inventory_Delete_Slot.png-8aa75e9e06b79c92ffd382ebab1b0159.ctex"]
+source_file="res://Assets/Sprites/Inventory/Inventory_Delete_Slot.png"
+dest_files=["res://.godot/imported/Inventory_Delete_Slot.png-156aedb98861b8cac458ec8cc68d0145.ctex"]
 
 [params]
 

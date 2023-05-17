@@ -1,0 +1,57 @@
+{
+	"dialogues": {
+		"Mushrooms": [
+			{
+				"speaker": "npc",
+				"text": "Oh, you're already here, son",
+				"choices": []
+			},
+			{
+				"speaker": "hero",
+				"text": "Yes, I walked near our forest and almost got caught in the rain",
+				"choices": []
+			},
+			{
+				"speaker": "npc",
+				"text": "Are you saying it was raining? I think I know what we'll have for dinner.",
+				"choices": []
+			},
+			{
+				"speaker": "npc",
+				"text": "In that forest, there are always plenty of mushrooms after the rain.",
+				"choices": []
+			},
+			{
+				"speaker": "npc",
+				"text": "You will have a task, go to that forest and pick at least a dozen of those mushrooms.",
+				"choices": [
+					{
+						"text": "Wait, I still have some things to do",
+						"event_type": "leave",
+					},
+					{
+						"text": "Alright, then I'm off.",
+						"event_type": "quests",
+						"event": "Mushrooms"
+					}
+				]
+			}
+		]
+	},
+	"quests": {
+		"quest_list": [
+			"Mushrooms"
+		],
+		"Mushrooms": {
+			"description": "TEXT",
+			"status": "available",
+			"tasks": [
+				{
+					"type": "collect",
+					"target": "mushroom",
+					"count": 10
+				}
+			]
+		}
+	}
+}

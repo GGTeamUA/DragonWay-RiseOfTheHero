@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i31dqin6n1io"
-path="res://.godot/imported/Inventory_Weapon_Slot.png-00ddbf6a839d9bc4f86f5cdb2b2cda90.ctex"
+path="res://.godot/imported/Inventory_Weapon_Slot.png-2c36ef469b35c3fdea7b037d3037af2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/inventory/Inventory_Weapon_Slot.png"
-dest_files=["res://.godot/imported/Inventory_Weapon_Slot.png-00ddbf6a839d9bc4f86f5cdb2b2cda90.ctex"]
+source_file="res://Assets/Sprites/Inventory/Inventory_Weapon_Slot.png"
+dest_files=["res://.godot/imported/Inventory_Weapon_Slot.png-2c36ef469b35c3fdea7b037d3037af2a.ctex"]
 
 [params]
 
