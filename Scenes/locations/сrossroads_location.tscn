@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=3 uid="uid://swaiem5phf1j"]
 
-[ext_resource type="TileSet" uid="uid://dq280l06fvcdn" path="res://tileset/start_location.tres" id="1_6ysrw"]
-[ext_resource type="PackedScene" path="res://scenes/characters/heroes/knight.tscn" id="2_i2pf3"]
-[ext_resource type="PackedScene" uid="uid://brghj11e6cdqf" path="res://scenes/decoration/navigation_tablet.tscn" id="3_uwfov"]
+[ext_resource type="TileSet" uid="uid://do205ri1cqbn8" path="res://TileSet/start_location.tres" id="1_6ysrw"]
+[ext_resource type="PackedScene" uid="uid://bw024xqokny4" path="res://Scenes/Characters/heroes/hero.tscn" id="3_rynys"]
+[ext_resource type="PackedScene" uid="uid://brghj11e6cdqf" path="res://Scenes/decoration/navigation_tablet.tscn" id="3_uwfov"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ms5ah"]
 a = Vector2(208, 144)
@@ -296,10 +296,6 @@ position = Vector2(0, -16)
 shape = SubResource("SegmentShape2D_kgx0i")
 debug_color = Color(1, 0, 0, 1)
 
-[node name="Knight" parent="." instance=ExtResource("2_i2pf3")]
-y_sort_enabled = true
-position = Vector2(992, 384)
-
 [node name="NavigationTablet" parent="." instance=ExtResource("3_uwfov")]
 position = Vector2(672, 288)
 _text = "Forest"
@@ -315,3 +311,6 @@ _text = "City"
 [node name="NavigationTablet4" parent="." instance=ExtResource("3_uwfov")]
 position = Vector2(704, 432)
 _text = "Village"
+
+[node name="Hero" parent="." instance=ExtResource("3_rynys")]
+position = Vector2(1080, 376)

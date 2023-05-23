@@ -1,8 +1,8 @@
-[gd_scene load_steps=20 format=3 uid="uid://ssdakjd284os"]
+[gd_scene load_steps=19 format=3 uid="uid://ssdakjd284os"]
 
-[ext_resource type="TileSet" uid="uid://do205ri1cqbn8" path="res://tileset/start_location.tres" id="1_rw40r"]
-[ext_resource type="PackedScene" path="res://scenes/items/mushroom.tscn" id="2_3m4b7"]
-[ext_resource type="PackedScene" uid="uid://3cum172ysor7" path="res://scenes/characters/heroes/knight.tscn" id="3_spfiw"]
+[ext_resource type="TileSet" uid="uid://do205ri1cqbn8" path="res://TileSet/start_location.tres" id="1_rw40r"]
+[ext_resource type="PackedScene" path="res://Scenes/items/mushroom.tscn" id="2_bkfmh"]
+[ext_resource type="PackedScene" uid="uid://bw024xqokny4" path="res://Scenes/Characters/heroes/hero.tscn" id="3_8w25i"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_cmkmi"]
 a = Vector2(352, 112)
@@ -98,32 +98,35 @@ layer_3/tile_data = PackedInt32Array(262143, 196613, 0, -262144, 10, 0, 327680, 
 y_sort_enabled = true
 position = Vector2(96, -48)
 
-[node name="Mushroom" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
+[node name="Mushroom" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
 position = Vector2(288, 240)
 
-[node name="Mushroom2" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(864, 272)
+[node name="Mushroom2" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(368, 624)
 
-[node name="Mushroom3" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(304, 528)
+[node name="Mushroom3" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(464, 336)
 
-[node name="Mushroom4" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(640, 560)
-
-[node name="Mushroom5" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(240, 368)
-
-[node name="Mushroom6" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(1008, 480)
-
-[node name="Mushroom7" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(1056, 320)
-
-[node name="Mushroom8" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
-position = Vector2(432, 384)
-
-[node name="Mushroom9" parent="Mushrooms" instance=ExtResource("2_3m4b7")]
+[node name="Mushroom4" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
 position = Vector2(656, 304)
+
+[node name="Mushroom5" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(688, 608)
+
+[node name="Mushroom6" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(1024, 448)
+
+[node name="Mushroom7" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(944, 208)
+
+[node name="Mushroom8" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(544, 496)
+
+[node name="Mushroom9" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(848, 368)
+
+[node name="Mushroom10" parent="Mushrooms" instance=ExtResource("2_bkfmh")]
+position = Vector2(288, 448)
 
 [node name="Borders" type="StaticBody2D" parent="."]
 
@@ -203,11 +206,5 @@ debug_color = Color(1, 0, 0, 1)
 position = Vector2(96, 376)
 shape = SubResource("RectangleShape2D_uq6hy")
 
-[node name="Knight" parent="." instance=ExtResource("3_spfiw")]
-position = Vector2(236, 379)
-
-[node name="Item" parent="." instance=ExtResource("4_mr6l2")]
-position = Vector2(288, 384)
-
-[node name="Item2" parent="." instance=ExtResource("4_mr6l2")]
-position = Vector2(256, 416)
+[node name="Hero" parent="." instance=ExtResource("3_8w25i")]
+position = Vector2(144, 384)
