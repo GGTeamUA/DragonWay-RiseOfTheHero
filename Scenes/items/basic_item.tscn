@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://dccue4yvy3o7h"]
 
 [ext_resource type="Script" path="res://scripts/items/item.gd" id="1_mhlpf"]
-[ext_resource type="Texture2D" uid="uid://c4ck0l50voebh" path="res://assets/sprites/items/armours.png" id="2_7t6iu"]
-[ext_resource type="FontFile" uid="uid://byo0gavi3n5pv" path="res://assets/fonts/pixelcyr_normal.ttf" id="3_uhdu1"]
+[ext_resource type="Texture2D" uid="uid://c4ck0l50voebh" path="res://Assets/Sprites/Items/armours.png" id="2_7t6iu"]
+[ext_resource type="FontFile" uid="uid://byo0gavi3n5pv" path="res://Assets/Fonts/pixelcyr_normal.ttf" id="3_uhdu1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aucqc"]
 size = Vector2(16, 16)
@@ -50,12 +50,13 @@ texture = SubResource("AtlasTexture_0obnv")
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 8.0
+offset_left = 12.0
 offset_top = 10.0
-offset_right = 21.0
-offset_bottom = 21.0
+offset_right = 25.0
+offset_bottom = 37.0
+scale = Vector2(0.4, 0.4)
 theme_override_fonts/font = ExtResource("3_uhdu1")
-theme_override_font_sizes/font_size = 7
+theme_override_font_sizes/font_size = 21
 text = "1"
 horizontal_alignment = 1
 metadata/_edit_lock_ = true

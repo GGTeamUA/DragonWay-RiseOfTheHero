@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc00fsgw4secm"]
+
+[ext_resource type="PackedScene" uid="uid://dccue4yvy3o7h" path="res://Scenes/items/basic_item.tscn" id="1_ca0xw"]
+[ext_resource type="Texture2D" uid="uid://cawjxujjay3su" path="res://Assets/Sprites/Items/all-assets-preview.png" id="2_5wywi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8dvd"]
+atlas = ExtResource("2_5wywi")
+region = Rect2(176, 32, 16, 16)
+
+[node name="Item" instance=ExtResource("1_ca0xw")]
+ID = 4
+item_name = "Water Potion"
+description = "This's just water"
+
+[node name="Sprite2D" parent="Area2D" index="0"]
+texture = ExtResource("2_5wywi")
+region_rect = Rect2(176, 32, 16, 16)
+
+[node name="TextureRect" parent="Control" index="0"]
+texture = SubResource("AtlasTexture_a8dvd")

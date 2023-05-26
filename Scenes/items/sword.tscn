@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bg3al3p0tqjuv"]
+
+[ext_resource type="PackedScene" uid="uid://dccue4yvy3o7h" path="res://Scenes/items/basic_item.tscn" id="1_ojhay"]
+[ext_resource type="Texture2D" uid="uid://cawjxujjay3su" path="res://Assets/Sprites/Items/all-assets-preview.png" id="2_sn5rf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o07i"]
+atlas = ExtResource("2_sn5rf")
+region = Rect2(528, 16, 16, 16)
+
+[node name="Item" instance=ExtResource("1_ojhay")]
+ID = 2
+type = 4
+item_name = "Sword"
+description = "1 damage"
+_stack_limit = 1
+
+[node name="Sprite2D" parent="Area2D" index="0"]
+texture = ExtResource("2_sn5rf")
+region_rect = Rect2(528, 16, 16, 16)
+
+[node name="TextureRect" parent="Control" index="0"]
+texture = SubResource("AtlasTexture_6o07i")
+
+[node name="Label" parent="Control" index="1"]
+visible = false
